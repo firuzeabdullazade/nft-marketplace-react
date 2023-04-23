@@ -1,6 +1,7 @@
 import './Header.scss';
 import logo from './logo.svg';
 import user from './User.svg';
+import burgerMenu from './Burger Menu.svg';
 
 export const Header = () => {
     return (
@@ -17,7 +18,7 @@ export const Header = () => {
                 </button>
             </div>
             <button className="burger-menu">
-                <img src="./assests/Burger Menu.svg" alt="burger menu"/>
+                <img src= {burgerMenu} alt="burger menu"/>
             </button>
         </div>
     </header>

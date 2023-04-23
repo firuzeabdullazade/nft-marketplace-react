@@ -1,4 +1,8 @@
 import "./HeroPart.scss";
+import imagePlaceholder from './Image Placeholder.png';
+import avatar from './Avatar Placeholder (2).png';
+import rocket from './RocketLaunch.svg';
+
 
 export const HeroPart = () => {
   return (
@@ -16,14 +20,14 @@ export const HeroPart = () => {
             <div className="highlighted-nft-mobile">
               <img
                 className="NFT-image"
-                src="./assests/Image Placeholder.png"
+                src={imagePlaceholder}
                 alt="NFT"
               />
               <div className="frame">
                 <h5>Space Walking</h5>
                 <div className="frame-bottom">
                   <img
-                    src="./assests/Avatar Placeholder (2).png"
+                    src={avatar}
                     alt="Avatar Placeholder"
                   />
                   <div className="animakid">Animakid</div>
@@ -31,7 +35,7 @@ export const HeroPart = () => {
               </div>
             </div>
             <button>
-              <img src="./assests/RocketLaunch.svg" alt="Rocket Launch" />
+              <img src={rocket} alt="Rocket Launch"/>
               Get Started
             </button>
             <div className="additional-info">
@@ -50,12 +54,12 @@ export const HeroPart = () => {
             </div>
           </div>
           <div className="highlighted-nft">
-            <img src="./assests/Image Placeholder.png" alt="NFT" />
+            <img src= {imagePlaceholder} alt="NFT" />
             <div className="frame">
               <h5>Space Walking</h5>
               <div className="frame-bottom">
                 <img
-                  src="./assests/Avatar Placeholder (2).png"
+                  src= {avatar}
                   alt="Avatar Placeholder"
                 />
                 <div className="animakid">Animakid</div>
