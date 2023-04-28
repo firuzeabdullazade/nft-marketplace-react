@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.scss';
-import { Header } from './Header';
-import { HomePage } from './pages/HomePage/HomePage';
-import { Footer } from './Footer';
+import { Header } from './app/components/Header/Header';
+import { HomePage } from './app/pages/HomePage/HomePage';
+import { Footer } from './app/components/Footer/Footer';
+import { ArtistPage } from './app/pages/ArtistPage/ArtistPage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Header />
     <main>
       <HomePage />
+      {/* <ArtistPage /> */}
     </main>
     <Footer />
     </>

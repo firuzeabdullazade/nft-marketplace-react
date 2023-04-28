@@ -1,0 +1,200 @@
+@import "../../../../../variables";
+
+.top-rated-artists {
+  color: $text-color;
+  padding: 40px 115px;
+  display: flex;
+  flex-direction: column;
+
+  .mobile {
+    display: none;
+  }
+
+  .section-headline-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .subheadline {
+      h3 {
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 46px;
+      }
+
+      .subhead {
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 35px;
+      }
+    }
+  }
+
+  button {
+    width: 247px;
+    height: 60px;
+    margin-top: 21px;
+    background-color: transparent;
+    border: 2px solid $button-color;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-color;
+    gap: 12px;
+  }
+
+  .artist-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 60px;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .artist-card,
+  .artist-card-mobile {
+    background-color: $secondary-background-color;
+    width: 240px;
+    height: 238px;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+    position: relative;
+
+    .ranking-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $background-color;
+      color: #858584;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    }
+
+    .artist-avatar {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .artist-info {
+      margin-top: 20px;
+      gap: 5px;
+
+      h5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 31px;
+      }
+
+      .additional-info {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        .total-sale {
+          font-family: $main-font;
+          color: #858584;
+        }
+
+        .eth {
+          font-family: $secondary-font;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .top-rated-artists {
+    padding: 40px 30px;
+    gap: 40px;
+
+    .section-headline-2 {
+      button {
+        display: none;
+      }
+
+      .subheadline {
+        h3 {
+          font-size: 28px;
+          line-height: 39px;
+        }
+
+        .subhead {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .mobile {
+      display: block;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .artist-cards-grid {
+      margin-top: 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .artist-card {
+        display: none;
+      }
+
+      .artist-card-mobile {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+
+        .ranking-number {
+          left: 12px;
+          top: 13px;
+        }
+
+        .artist-avatar {
+          img {
+            height: 60px;
+            object-fit: cover;
+          }
+        }
+
+        .artist-info {
+          margin-top: 0;
+
+          h5 {
+            font-size: 22px;
+            line-height: 31px;
+            justify-content: flex-start;
+          }
+
+          .additional-info {
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../../../../variables";
+
+.NFT-cards-section {
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-color;
+  background-color: $secondary-background-color;
+
+  .NFT-cards-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .NFT-card,
+  .NFT-card-mobile {
+    display: flex;
+    flex-direction: column;
+
+    .NFT-info {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px 25px;
+      gap: 25px;
+      border-radius: 0px 0px 20px 20px;
+      background-color: $background-color;
+
+      .artist-info {
+        gap: 5px;
+
+        h5 {
+          font-family: $main-font;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 31px;
+        }
+
+        .artist-avatar-name {
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+          font-family: $secondary-font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      .additional-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .price {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        .highest-bid {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 8px;
+        }
+
+        .top {
+          font-family: $secondary-font;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 13px;
+          color: #858584;
+        }
+
+        .bottom {
+          font-family: $secondary-font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .NFT-cards-section {
+    padding: 80px 0px;
+
+    .NFT-card {
+      display: none;
+    }
+
+    .NFT-cards-rows {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .NFT-card-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
