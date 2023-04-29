@@ -1,0 +1,107 @@
+@import '../../../../../variables';
+
+.header {
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    border-bottom: 1px solid $secondary-background-color;
+
+    .headline-subhead {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: $main-font;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 51px;
+        line-height: 56px;
+    }
+
+    .subhead {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    .table-header {
+        border: 1px solid $secondary-background-color;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0px;
+    }
+
+    .table-subheader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        width: 1050px;
+
+        input {
+            font-family: 'Work Sans';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #858584;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 960px;
+        }
+
+        button {
+            border: transparent;
+            background-color: transparent;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+
+    .header {
+        padding: 40px 30px;
+
+        .headline-subhead {
+
+            .headline {
+
+                h2 {
+                    font-size: 28px;
+                    line-height: 39px;
+                }
+
+                .subhead {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            .table-header {
+                width: 100%;
+
+                .table-subheader {
+                    width: 100%;
+                    height: 24px;
+
+                    input {
+                        width: 230px;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}

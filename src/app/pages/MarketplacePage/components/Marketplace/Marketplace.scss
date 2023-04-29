@@ -1,0 +1,221 @@
+@import '../../../../../variables';
+
+.marketplace-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 115px 0px 115px;
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        width: 1050px;
+        justify-content: space-between;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 115px 0px;
+
+        .tab-1 {
+            border-bottom: 2px solid #858584;
+            color: $text-color;
+
+            .number-1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 32px;
+                background: #858584;
+                border-radius: 20px;
+            }
+        }
+
+        .tab-1,
+        .tab-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 30px;
+            gap: 16px;
+            width: 350px;
+            height: 60px;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+
+            h5 {
+                font-family: $main-font;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 31px;
+                color: $text-color;
+            }
+        }
+
+        .number-1,
+        .number-2 {
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .number-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 32px;
+            background: $secondary-background-color;
+            border-radius: 20px;
+            color: $text-color;
+        }
+
+        .first {
+            color: #858584;
+        }
+    }
+
+    .NFT-cards-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 60px 115px 80px 115px;
+        gap: 30px;
+        color: $text-color;
+        background-color: $secondary-background-color;
+    }
+
+    .NFT-card,
+    .NFT-card-mobile {
+        display: flex;
+        flex-direction: column;
+
+        .NFT-info {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 30px 25px;
+            gap: 25px;
+            border-radius: 0px 0px 20px 20px;
+            background-color: $background-color;
+
+            .artist-info {
+                gap: 5px;
+
+                h5 {
+                    font-family: $main-font;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 31px;
+                }
+
+                .artist-avatar-name {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            .additional-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .price {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 8px;
+                }
+
+                .highest-bid {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 8px;
+                }
+
+                .top {
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 13px;
+                    color: #858584;
+                }
+
+                .bottom {
+                    font-family: $secondary-font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+
+    .marketplace-section {
+
+        .head {
+            padding: 10px 30px 0px;
+
+            .tabs {
+                width: 100%;
+
+                .tab-1,
+                .tab-2 {
+                    width: 100%;
+                }
+
+                .number-1,
+                .number-2 {
+                    display: none;
+                }
+
+                button {
+
+                    h5 {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+
+                .tab-1 {
+                    padding: 0px 60px;
+                }
+
+                .tab-2 {
+                    padding: 0px 34px;
+                }
+            }
+        }
+        
+        .NFT-cards-section {
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+  
+                .NFT-card {
+                    display: none;
+                }
+
+                
+                .NFT-info {
+                    margin-top: -8px;
+                }
+            
+        }
+    }
+}

@@ -25,6 +25,10 @@ header {
       color: $text-color;
     }
 
+    .link {
+      text-decoration: none;
+    }
+
     button {
       background-color: $button-color;
       border: $button-color;
